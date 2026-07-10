@@ -95,10 +95,10 @@ export default function HomePage({ go }: { go: (p: Page) => void }) {
         <motion.button
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.96 }}
-          onClick={() => go("achievements")}
+          onClick={() => window.open("https://photos.app.goo.gl/EMjGZ5L6LuGy9Euw7", "_blank")}
           className="inline-flex items-center gap-3 bg-[#6B8CAE] hover:bg-[#7D9DBF] text-white px-10 py-4 rounded-full text-xs tracking-[0.2em] uppercase font-medium transition-colors shadow-2xl shadow-[#6B8CAE]/25"
         >
-          Begin Exploring
+          Photo Album
           <span className="opacity-70">→</span>
         </motion.button>
 

@@ -5,72 +5,56 @@ export const MEMORY_STARS = [
     y: 22,
     label: "First Date",
     memory:
-      "The little Italian place where we talked until they turned the lights off on us.",
+      "Pizza, lots of talking, dancing on the beach, and staying out until 3am",
   },
   {
     id: 2,
     x: 37,
     y: 13,
-    label: "The Road Trip",
+    label: "Third Date",
     memory:
-      "Lost three times, sang every song twice, wouldn't change a single wrong turn.",
+      "After two wonderful dates I decided to invite you to my place for the whole weekend. Very soon but when you know you know",
   },
   {
     id: 3,
     x: 58,
     y: 30,
     label: "I Love You",
-    memory: "You said it first. I was scared and then I wasn't.",
+    memory: "I said it first. I was scared to say it but then I got very drunk on wine and well drunk words are sober thoughts.",
   },
   {
     id: 4,
     x: 76,
     y: 17,
-    label: "Christmas Together",
+    label: "Meeting the family",
     memory:
-      "Matching pajamas, your mom's recipe, snow outside the window.",
+      "You came up for my graduation and got to meet my WHOLE family. It went so great and everyone loves you!",
   },
   {
     id: 5,
     x: 83,
     y: 42,
-    label: "Our Song",
+    label: "Bulgogi King!",
     memory:
-      "The one that came on at exactly the right moment. We knew immediately.",
+      "How can we forget the time you met my friends at KBBQ and got crowned the Bulgogi King",
   },
   {
     id: 6,
     x: 27,
     y: 50,
-    label: "The Beach",
-    memory: "Sunrise, coffee, and absolutely nowhere to be.",
+    label: "It's Official",
+    memory: "You made it official at the hot tubs on June 15th!",
   },
   {
     id: 7,
     x: 52,
     y: 60,
-    label: "One Year",
+    label: "Monthaversary",
     memory:
-      "How did we get here so fast? I hope the next one goes slower.",
+      "Don't worry we won't be celebrating monthaversairies, but I can't believe it's only been a month. Were just so locked in it feels like I've know you for so much longer",
   },
   {
     id: 8,
-    x: 68,
-    y: 72,
-    label: "First Apartment",
-    memory:
-      "Boxes everywhere. Your terrible furniture assembly. The best pizza we ever ordered.",
-  },
-  {
-    id: 9,
-    x: 21,
-    y: 74,
-    label: "Late Night Talks",
-    memory:
-      "3am conversations that became the things we know best about each other.",
-  },
-  {
-    id: 10,
     x: 88,
     y: 78,
     label: "The Future",
@@ -86,6 +70,4 @@ export const CONST_EDGES = [
   [2, 6],
   [6, 5],
   [6, 7],
-  [7, 8],
-  [6, 9],
 ];

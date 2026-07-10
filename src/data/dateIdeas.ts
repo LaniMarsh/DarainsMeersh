@@ -1,72 +1,72 @@
 export const DATE_IDEAS = [
   {
-    title: "Midnight Stargazing Picnic",
+    title: "Salsa Social",
     description:
-      "Pack your favorite snacks, a warm blanket, and your best playlist. Find a quiet hill and count the stars until 2am.",
-    emoji: "🌙",
-    vibe: "Romantic · Outdoors",
+      "Find a salsa social, and then grab a sweet bevvy",
+    emoji: "💃",
+    vibe: "Dance · Social",
   },
   {
-    title: "Cooking a New Cuisine Together",
+    title: "Beach Sunset Picnic",
     description:
-      "Pick a country neither of you has cooked from. Shop for ingredients, put on a playlist, and embrace the chaos.",
-    emoji: "👨‍🍳",
+      "Bring food and a blanket, and watch the sunset together",
+    emoji: "🌅",
+    vibe: "Romantic · Beach",
+  },
+  {
+    title: "Coffee Shop Card Games",
+    description:
+      "Visit a local coffee shop and play card games... winner can request a service from the loser ;)",
+    emoji: "☕",
+    vibe: "Casual · Competitive",
+  },
+  {
+    title: "Bookstore Date",
+    description:
+      "Split up for twenty minutes and secretly pick a book you think the other person would love. Trade them and explain why.",
+    emoji: "📚",
+    vibe: "Cozy · Quiet",
+  },
+  {
+    title: "Cook Dinner Together",
+    description:
+      "Choose a new recipe and cook together",
+    emoji: "🍝",
     vibe: "Home · Cozy",
   },
   {
-    title: "Spontaneous Road Trip",
+    title: "Day Trip Adventure",
     description:
-      "Set the alarm early, grab coffee to go, and drive somewhere new. No GPS — just instinct and good music.",
+      "If we are in SLO we drive up to Hearst Castle and after we go see the elephant seals. If we are in San Diego we drive to Julian to get some apple pie.",
     emoji: "🚗",
     vibe: "Adventure · Spontaneous",
   },
   {
-    title: "Bookshop Scavenger Hunt",
+    title: "Thrift Store Challenge",
     description:
-      "Each choose 3 books for the other based on secret clues. Read the first chapter together that evening.",
-    emoji: "📚",
-    vibe: "Cozy · Creative",
+      "Each of us gets $20 to find the funniest outfit or the coolest item for the other person.",
+    emoji: "🛍️",
+    vibe: "Funny · Creative",
   },
   {
-    title: "Home Spa Evening",
+    title: "Movie Marathon",
     description:
-      "Face masks, candles, a movie you've been saving, and absolutely no obligations the next morning.",
-    emoji: "🕯️",
-    vibe: "Cozy · Home",
-  },
-  {
-    title: "Mini Golf Championship",
-    description:
-      "Whoever loses buys dessert. Play-by-play commentary required. Document every near-miss in excruciating detail.",
-    emoji: "⛳",
-    vibe: "Fun · Playful",
-  },
-  {
-    title: "Farmer's Market Morning",
-    description:
-      "Go early, sample everything shamelessly, buy something strange, and cook it together for dinner.",
-    emoji: "🌸",
-    vibe: "Morning · Casual",
-  },
-  {
-    title: "Build Something Together",
-    description:
-      "A puzzle, a piece of furniture, a terrarium — anything that results in something you made together.",
-    emoji: "🔨",
-    vibe: "Creative · Teamwork",
-  },
-  {
-    title: "Sunset Boat Ride",
-    description:
-      "Rent a kayak or find a ferry. Watch the city shift colors as the sun drops below the water.",
-    emoji: "🚣",
-    vibe: "Romantic · Water",
-  },
-  {
-    title: "Drive-In Movie Night",
-    description:
-      "Find the nearest drive-in, bring terrible snacks, argue lovingly about the movie choice. Classic.",
+      "Blankets, popcorn, way too many snacks, and a full movie marathon with absolutely no responsibilities for the day.",
     emoji: "🎬",
-    vibe: "Nostalgic · Fun",
+    vibe: "Home · Cozy",
+  },
+  {
+    title: "Dessert Crawl",
+    description:
+      "Visit three different dessert places and split one item at each until we decide which one deserves first place. Must be done in San Diego (SLO only has three dessert places)",
+    emoji: "🍰",
+    vibe: "Food · Sweet",
+  },
+  {
+    title: "Star Gazing",
+    description:
+      "In SLO we go to Montana de Oro and enjoy the stars.",
+    emoji: "✨",
+    vibe: "Romantic · Night",
   },
 ];
