@@ -4,28 +4,11 @@ import { motion, AnimatePresence } from "motion/react";
 import StarField from "../components/StarField";
 import SectionLabel from "../components/SectionLabel";
 
-import {
-  LOVE_REASONS,
-  LOVE_REASON_CATEGORIES,
-  type LoveReason,
-} from "../data/loveReasons";
+import { LOVE_REASONS, type LoveReason } from "../data/loveReasons";
 
 export default function LoveNotesPage() {
   const [selectedReason, setSelectedReason] =
     useState<LoveReason | null>(null);
-
-  const [category, setCategory] =
-    useState<(typeof LOVE_REASON_CATEGORIES)[number]>("All");
-
-  const filteredReasons = useMemo(() => {
-    if (category === "All") {
-      return LOVE_REASONS;
-    }
-
-    return LOVE_REASONS.filter(
-      (reason) => reason.category === category
-    );
-  }, [category]);
 
   const reasonOfTheDay = useMemo(() => {
     const today = new Date();
@@ -92,7 +75,7 @@ export default function LoveNotesPage() {
 
           <div className="relative z-10">
             <p className="mb-5 text-[10px] font-medium uppercase tracking-[0.4em] text-[#C9A96E]">
-              Reason of the Day
+              I love you because...
             </p>
 
             <div className="mb-5 text-5xl">
@@ -121,32 +104,16 @@ export default function LoveNotesPage() {
         </motion.section>
 
         <section>
-          <div className="mb-9 flex flex-wrap justify-center gap-2">
-            {LOVE_REASON_CATEGORIES.map((item) => (
-              <button
-                key={item}
-                onClick={() => setCategory(item)}
-                className={`rounded-full border px-4 py-2 text-xs transition-all duration-200 ${
-                  category === item
-                    ? "border-[#C9A96E]/70 bg-[#C9A96E] text-[#0d1b38] shadow-lg shadow-[#C9A96E]/15"
-                    : "border-white/10 bg-white/[0.05] text-white/50 hover:border-white/25 hover:text-white"
-                }`}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-
           <AnimatePresence mode="wait">
             <motion.div
-              key={category}
+              key="reasons"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.3 }}
               className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
             >
-              {filteredReasons.map((reason, index) => (
+              {LOVE_REASONS.map((reason, index) => (
                 <motion.button
                   key={reason.id}
                   initial={{ opacity: 0, scale: 0.92 }}
@@ -183,10 +150,6 @@ export default function LoveNotesPage() {
                     </div>
 
                     <div>
-                      <p className="mb-1 text-[9px] uppercase tracking-[0.22em] text-[#C9A96E]/70">
-                        {reason.category}
-                      </p>
-
                       <p
                         className="text-sm text-white/70 transition-colors group-hover:text-white"
                         style={{
