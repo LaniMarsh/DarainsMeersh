@@ -5,6 +5,17 @@ import StarField from "../components/StarField";
 import SectionLabel from "../components/SectionLabel";
 
 export default function HomePage({ go }: { go: (p: Page) => void }) {
+  const today = new Date();
+  const targetDate = new Date(today.getFullYear(), 6, 17);
+
+  if (targetDate < today) {
+    targetDate.setFullYear(targetDate.getFullYear() + 1);
+  }
+
+  const daysUntil = Math.ceil(
+    (targetDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
+  );
+
   return (
     <div className="relative min-h-screen bg-[#080f1e] flex flex-col items-center justify-center overflow-hidden">
       <StarField count={200} />
@@ -87,20 +98,29 @@ export default function HomePage({ go }: { go: (p: Page) => void }) {
           <em className="text-[#A8C5DE]">Darion & Lani</em>
         </h1>
 
-        <p className="text-white/55 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-12">
-          A collection of our memories, adventures,
-          <br className="hidden sm:block" /> and everything still to come.
-        </p>
+        <div className="mx-auto flex flex-col items-center gap-4">
+          <div className="inline-flex flex-col items-center rounded-full border border-[#C9A96E]/30 bg-white/[0.06] px-10 py-5 shadow-lg shadow-[#C9A96E]/10 backdrop-blur-sm min-w-[280px] sm:min-w-[320px]">
+            <p className="text-[11px] uppercase tracking-[0.4em] text-[#C9A96E]">
+              Counting down
+            </p>
+            <p className="mt-2 text-4xl font-semibold text-white sm:text-5xl">
+              {daysUntil}
+            </p>
+            <p className="mt-1 text-base text-white/70">
+              {daysUntil === 1 ? "day" : "days"} until we see each other
+            </p>
+          </div>
 
-        <motion.button
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.96 }}
-          onClick={() => window.open("https://photos.app.goo.gl/rp1BDPz3cuDeYLxN7", "_blank")}
-          className="inline-flex items-center gap-3 bg-[#6B8CAE] hover:bg-[#7D9DBF] text-white px-10 py-4 rounded-full text-xs tracking-[0.2em] uppercase font-medium transition-colors shadow-2xl shadow-[#6B8CAE]/25"
-        >
-          Photo Album
-          <span className="opacity-70">→</span>
-        </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
+            onClick={() => window.open("https://photos.app.goo.gl/rp1BDPz3cuDeYLxN7", "_blank")}
+            className="inline-flex items-center gap-3 bg-[#6B8CAE] hover:bg-[#7D9DBF] text-white px-10 py-4 rounded-full text-xs tracking-[0.2em] uppercase font-medium transition-colors shadow-2xl shadow-[#6B8CAE]/25"
+          >
+            Photo Album
+            <span className="opacity-70">→</span>
+          </motion.button>
+        </div>
 
         <div className="mt-16 grid grid-cols-4 gap-6 max-w-sm mx-auto">
           {NAV_LINKS.slice(0, 4).map((l) => (
